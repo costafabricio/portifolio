@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/Gemini_Generated_Image_bwowttbwowttbwow.png" alt="foto de perfil" class="foto-perfil">
+        <h1>Fabricio Costa</h1>
+        <p class="cabecalho-paragrafo">Desenvolvedor</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou desenvolvedor em constante evolução, apaixonado por programação e movido pela
+                vontade de aprender.
+                Vejo cada desafio como uma oportunidade de crescimento e cada linha de código como parte de um grande
+                aprendizado.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <a href="https://costafabricio.github.io/Projeto-Tela-de-Login/" target="_blank">
+                    <img src="./img/Imagem do WhatsApp de 2025-09-29 à(s) 15.04.03_4bc40bb5.jpg" alt="projeto tela de login"
+                    class="projeto-imagem">
+                </a>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Projeto Tela de Login</h3>
+                    <p class="paragrafo-projetos">Projeto tela de login para cadastro de usuarios.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <a href="https://costafabricio.github.io/projeto-social/" target="_blank">
+                     <img src="./img/Imagem do WhatsApp de 2025-09-29 à(s) 15.05.28_c0add8a1.jpg" alt="projeto redes sociais"
+                    class="projeto-imagem">
+                </a>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Projeto Redes Sociais</h3>
+                    <p class="paragrafo-projetos">Projeto de Redes sociais com iframe.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                 <a href="https://costafabricio.github.io/projeto-android/" target="_blank">
+                      <img src="./img/Captura de tela 2025-09-29 154250.png" alt="Projeto Android" class="projeto-imagem">
+                 </a>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Projeto Android</h3>
+                    <p class="paragrafo-projetos">Blog que conta a historia de como surgir o bugdroid.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="contatos">
+        <h2 class="titulo-contato">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511962669685'
+
+            const texto = `Olá, Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+
+</body>
+
+</html>
