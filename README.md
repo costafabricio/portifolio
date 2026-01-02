@@ -20,8 +20,6 @@
 </p>
 
 <h2 id="technologies">💻 Technologies</h2>
-
-- list of all technologies you used
 - HTML
 - CSS
 
