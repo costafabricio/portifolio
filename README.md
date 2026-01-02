@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-     <a href="https://costafabricio.github.io/Portifolio/">📱 Visit this Project</a>
+     <a href="https://costafabricio.github.io/portifolio/">📱 Visit this Project</a>
 </p>
 
 <h2 id="layout">🎨 Layout</h2>
